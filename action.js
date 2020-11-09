@@ -7,10 +7,30 @@ BONUS 2: cliccando su un pallino, si attiva l'immagine corrispondente.
 */
 
 let app = new Vue({
-  el: 'root',
+  el: '#root',
   data: {
-
+    index_pic: 0,
+    pictures : [
+    'img/lake.jpg',
+    'img/sunset.jpg',
+    'img/forest.jpg',
+    'img/ocean.jpg',
+    'img/mountains.jpg',
+    ],
+    descriptions : [
+    'Lake',
+    'Sunset',
+    'Forest',
+    'Ocean',
+    'Mountains',
+    ],
   },
   methods: {
+    scrollNext() {
+      this.index_pic +=1;
+      if(this.index_pic >= this.pictures.length) {
+        this.index_pic = 0;
+      }
+    }
   },
 });

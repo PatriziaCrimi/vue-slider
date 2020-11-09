@@ -28,15 +28,11 @@
             </div>
             <div class="col-10">
               <div class="slides">
-                <img class="active" src="img/lake.jpg" alt="Lake">
-                <img src="img/sunset.jpg" alt="Sunset">
-                <img src="img/forest.jpg" alt="Forest">
-                <img src="img/ocean.jpg" alt="Ocean">
-                <img src="img/mountains.jpg" alt="Mountains">
+                <img :src="pictures[index_pic]" :alt="descriptions[index_pic]">
               </div>
             </div>
             <div class="col-1">
-              <div class="next">
+              <div @click="scrollNext" class="next">
                 <i class="fas fa-chevron-right"></i>
               </div>
             </div>
@@ -44,10 +40,6 @@
           <div class="row">
             <div class="col-12">
               <div class="circles text-center">
-                <i class="fas fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
-                <i class="far fa-circle"></i>
                 <i class="far fa-circle"></i>
               </div>
             </div>
