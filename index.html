@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Carousel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="root">
+      <div id="page-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h1 class="text-center">Carousel</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <div class="prev">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+            </div>
+            <div class="col-10">
+              <div class="slides">
+                <img class="active" src="img/lake.jpg" alt="Lake">
+                <img src="img/sunset.jpg" alt="Sunset">
+                <img src="img/forest.jpg" alt="Forest">
+                <img src="img/ocean.jpg" alt="Ocean">
+                <img src="img/mountains.jpg" alt="Mountains">
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="next">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="circles text-center">
+                <i class="fas fa-circle"></i>
+                <i class="far fa-circle"></i>
+                <i class="far fa-circle"></i>
+                <i class="far fa-circle"></i>
+                <i class="far fa-circle"></i>
+              </div>
+            </div>
+          </div>
+        </div>  <!-- Closing container -->
+      </div>  <!-- Closing page-wrapper -->
+    </div>    <!-- End of #root (VUE JS) -->
+    <script type="text/javascript" src="action.js"></script>
+  </body>
+</html>
