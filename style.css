@@ -64,3 +64,9 @@ h1 {
 .circles > i:hover {
   cursor: pointer;
 }
+
+button.btn.btn-light {
+  margin-top: 30px;
+  background-color: #CEF6F5;
+  color: darkblue;
+}
