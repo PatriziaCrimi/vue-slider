@@ -27,10 +27,16 @@ let app = new Vue({
   },
   methods: {
     scrollNext() {
-      this.index_pic +=1;
+      this.index_pic++;
       if(this.index_pic >= this.pictures.length) {
         this.index_pic = 0;
       }
-    }
+    },
+    scrollPrev() {
+      this.index_pic--;
+      if(this.index_pic <= 0) {
+        this.index_pic = this.pictures.length - 1;
+      }
+    },
   },
 });
