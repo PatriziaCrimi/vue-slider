@@ -44,5 +44,9 @@ let app = new Vue({
         this.index_pic = this.pictures.length - 1;
       }
     },
+    selectPicture() {
+      // Assigning the index of the circle clicked to index_pic (circle and picture sharing the same index are shown simultaneously)
+      this.index_pic = //index circle clicked;
+    },
   },
 });
