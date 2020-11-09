@@ -1,7 +1,7 @@
 /*ASSIGNMENT
 Rifate lo slider di immagini con Vue.
 Aggiungete anche i pallini che si "muovono" di pari passo con le immagini.
-BONUS 1: l'autoplay con una timing functions.
+BONUS 1: l'autoplay con una timing function.
 Piccolo consiglio: cercate nella documentazione di vue come fare per eseguire una funzione quando l'istanza di Vue è stata creata.
 BONUS 2: cliccando su un pallino, si attiva l'immagine corrispondente.
 */
@@ -24,6 +24,10 @@ let app = new Vue({
     'Ocean',
     'Mountains',
     ],
+  },  // Closing "data"
+  created: function() {
+    const pause_sliding = 3000;
+    let stopAutoplay = setInterval(this.scrollNext, pause_sliding);
   },
   methods: {
     scrollNext() {
@@ -45,8 +49,19 @@ let app = new Vue({
       }
     },
     selectPicture(index) {
-      // Assigning the index of the circle clicked to index_pic (circle and picture sharing the same index are shown simultaneously)
+      // Assigning the index of the clicked circle to index_pic (circle and picture sharing the same index are shown simultaneously)
       this.index_pic = index;
     },
-  },
+    /*
+    autoplay() {
+      // Incrementing the index of the pictures array to scroll to the following pic
+      this.index_pic++;
+      // Checking if the next picture actually exists or if the length of the pictures array has been reached
+      if(this.index_pic >= this.pictures.length) {
+        // Re-starting the sliding from the first picture
+        this.index_pic = 0;
+      }
+    },
+    */
+  },  // Closing "methods"
 });
