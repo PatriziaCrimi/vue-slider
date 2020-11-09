@@ -60,3 +60,7 @@ h1 {
 .circles > i {
   padding: 0 5px 0;
 }
+
+.circles > i:hover {
+  cursor: pointer;
+}

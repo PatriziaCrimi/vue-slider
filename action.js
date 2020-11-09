@@ -27,14 +27,20 @@ let app = new Vue({
   },
   methods: {
     scrollNext() {
+      // Incrementing the index of the pictures array to scroll to the following pic
       this.index_pic++;
+      // Checking if the next picture actually exists or if the length of the pictures array has been reached
       if(this.index_pic >= this.pictures.length) {
+        // Re-starting the sliding from the first picture
         this.index_pic = 0;
       }
     },
     scrollPrev() {
+      // Decrementing the index of the pictures array to scroll to the previous pic
       this.index_pic--;
+      // Checking if the previous picture actually exists
       if(this.index_pic <= 0) {
+        // Re-starting the sliding from the last picture
         this.index_pic = this.pictures.length - 1;
       }
     },

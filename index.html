@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-12">
               <div class="circles text-center">
-                <i class="far fa-circle"></i>
+                <i v-for="(i, index) in pictures" :class="index === index_pic ? 'fas' : 'far'" class="fa-circle"></i>
               </div>
             </div>
           </div>
