@@ -5,12 +5,18 @@ BONUS 1: l'autoplay con una timing function.
 Piccolo consiglio: cercate nella documentazione di vue come fare per eseguire una funzione quando l'istanza di Vue è stata creata.
 BONUS 2: cliccando su un pallino, si attiva l'immagine corrispondente.
 */
+
+/*
+Initialization of variables and constants (as global variables)
 let autoplay;
-const pause_sliding = 3000;
+const sliding_interval = 3000;
+*/
 
 let app = new Vue({
   el: '#root',
   data: {
+    autoplay: '',
+    sliding_interval: 3000, // milliseconds (3s)
     isAutoplay: true,
     index_pic: 0,
     pictures : [
@@ -29,7 +35,7 @@ let app = new Vue({
     ],
   },  // Closing "data"
   created: function() {
-    autoplay = setInterval(this.onAutoplay, pause_sliding);
+    autoplay = setInterval(this.onAutoplay, this.sliding_interval);
   },
   methods: {
     nextPicture() {
@@ -73,7 +79,7 @@ let app = new Vue({
       if(this.isAutoplay) {
         this.stopAutoplay();
       } else {
-        autoplay = setInterval(this.onAutoplay, pause_sliding);
+        autoplay = setInterval(this.onAutoplay, this.sliding_interval);
       }
     }
   },  // Closing "methods"
